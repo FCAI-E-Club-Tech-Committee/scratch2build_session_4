@@ -235,3 +235,166 @@ button:hover {
     width: 100%;
   }
 }
+*,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        background-color: #0f172a; /* Dark Navy Background */
+        color: #f8fafc; /* White Text */
+        padding: 2.5rem;
+      }
+
+      /* Target all Heading elements using Grouping Selector */
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        color: #f8fafc;
+        margin-bottom: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #38bdf8; /* Electric Sky Blue */
+      }
+
+   
+      .card {
+        background-color: #1e293b; /* Dark Surface Card */
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      
+      [data-status="active"] {
+        background-color: rgba(52, 211, 153, 0.15); /* Green Tint */
+        color: #34d399; /* Emerald Green */
+        border: 1px solid #34d399;
+      }
+
+      [data-status="pending"] {
+        background-color: rgba(251, 191, 36, 0.15); /* Amber Tint */
+        color: #fbbf24; /* Warning Amber */
+        border: 1px solid #fbbf24;
+      }
+
+      
+      code,
+      .code-text {
+        font-family: "Fira Code", monospace;
+        font-size: 0.875rem;
+        color: #38bdf8;
+        background-color: rgba(15, 23, 42, 0.6);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+      }
+
+
+      /* Descendant Selector: Targets <span> inside .user-profile */
+      .user-profile span {
+        color: #94a3b8;
+        font-size: 0.9rem;
+      }
+
+      /* Direct Child Selector (>): Targets direct <p> children inside 
+         .bio-section */
+      .bio-section > p {
+        font-size: 1.05rem;
+        color: #94a3b8;
+        margin-top: 0.5rem;
+      }
+
+      /* Adjacent Sibling Selector (+): Targets <p> that comes 
+         immediately after an <h2> */
+      h2 + p {
+        border-left: 3px solid #38bdf8;
+        padding-left: 0.75rem;
+        margin-top: 0.5rem;
+      }
+
+      /* General Sibling Selector (~): Targets all <small> elements 
+         after an <h3> */
+      h3 ~ small {
+        display: block;
+        color: #94a3b8;
+        margin-top: 0.25rem;
+      }
+
+      /* Compound Selector: Belongs to element that has BOTH .btn and 
+         .btn-primary */
+      .btn.btn-primary {
+        display: inline-block;
+        background-color: #38bdf8;
+        color: #0f172a;
+        font-weight: 600;
+        padding: 0.6rem 1.25rem;
+        border-radius: 6px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      /* Pseudo-class: Hover State */
+      .btn.btn-primary:hover {
+        background-color: #0284c7;
+      }
+
+      /* Form Input Focus State */
+      input[type="text"]:focus,
+      textarea:focus {
+        outline: 2px solid #38bdf8;
+        border-color: transparent;
+      }
+
+      /* Structural Pseudo-class: Target even rows in list */
+      .skills-list li:nth-child(even) {
+        color: #38bdf8;
+      }
+
+      /* Target the very first card on the page */
+      .card:first-of-type {
+        border-top: 4px solid #38bdf8;
+      }
+
+      /* Pseudo-element: ::first-letter on featured text */
+      .featured-text::first-letter {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #38bdf8;
+        float: left;
+        margin-right: 0.4rem;
+        line-height: 1;
+      }
+
+      /* Pseudo-element: ::before content insertion */
+      [data-status="active"]::before {
+        content: "● ";
+      }
